@@ -9,6 +9,9 @@ public class SaveData : MonoBehaviour
     public static SaveData instance;
     [HideInInspector]
     public int perk;
+    [HideInInspector]
+    public int gem;
+
     [SerializeField]
     public float baseDmg;
     public float baseSpd;
@@ -28,7 +31,14 @@ public class SaveData : MonoBehaviour
         perk = PlayerPrefs.GetInt("SavePerk");
         print($"SavePerk: {PlayerPrefs.GetInt("SavePerk")}");
         print($"GainPerk: {PlayerPrefs.GetInt("GainPerk")}");
-        print($"Perk: {perk}");
+        print($"Perk개수: {perk}");
+
+        //Gem Setting
+        PlayerPrefs.SetInt("SavePerk", PlayerPrefs.GetInt("SaveGem") + PlayerPrefs.GetInt("GainGem"));  //GameManager에서 적용한 퍽을 저장소에 더함
+        gem = PlayerPrefs.GetInt("SaveGem");
+        print($"SaveGem: {PlayerPrefs.GetInt("SaveGem")}");
+        print($"GainGem: {PlayerPrefs.GetInt("GainGem")}");
+        print($"Gem개수: {gem}");
     }
 
     public void Reset()
@@ -37,6 +47,11 @@ public class SaveData : MonoBehaviour
         PlayerPrefs.SetInt("SavePerk", 0);
         PlayerPrefs.SetInt("GainPerk", 0);
         perk = 0;
+
+        //젬 개수 초기화
+        PlayerPrefs.SetInt("SaveGem", 0);
+        PlayerPrefs.SetInt("GainGem", 0);
+        gem = 0;
 
         //퍽 업글 초기화
         PlayerPrefs.SetFloat("BaseDmg", 0);

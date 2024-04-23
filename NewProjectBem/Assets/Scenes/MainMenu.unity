@@ -462,10 +462,10 @@ RectTransform:
   - {fileID: 797277504}
   m_Father: {fileID: 2083935892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 121.25, y: -80}
+  m_SizeDelta: {x: 42.5, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &236727271
 MonoBehaviour:
@@ -511,13 +511,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1332388234}
+        m_TargetAssemblyTypeName: Gacha, Assembly-CSharp
+        m_MethodName: OneGacha
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1257,10 +1257,10 @@ RectTransform:
   - {fileID: 1985608057}
   m_Father: {fileID: 2083935892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 168.75, y: -80}
+  m_SizeDelta: {x: 42.5, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &817015571
 MonoBehaviour:
@@ -1306,13 +1306,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1332388234}
+        m_TargetAssemblyTypeName: Gacha, Assembly-CSharp
+        m_MethodName: TenGacha
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2174,6 +2174,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274559496}
   m_CullTransparentMesh: 1
+--- !u!1 &1332388233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1332388235}
+  - component: {fileID: 1332388234}
+  m_Layer: 0
+  m_Name: Gacha
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1332388234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332388233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a558f5a6386fefb42ba2688cab58a230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UniquePetList:
+  - "\uC9F1\uC13C \uD3AB"
+  - "\uC874\uB098\uC13C \uD3AB"
+  RarePetList:
+  - "\uD3AB"
+  - "\uD3AB2"
+  grade: 
+--- !u!4 &1332388235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332388233}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 988.3564, y: 1227.2983, z: -8.25631}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1350881368
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,6 +2255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perk: 0
+  gem: 0
   baseDmg: 0
   baseSpd: 0
   baseMHp: 0
@@ -2651,7 +2703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2083935892
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2743,5 +2795,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1362370}
   - {fileID: 1350881370}
+  - {fileID: 1332388235}
   - {fileID: 1450419960}
   - {fileID: 787541168}
